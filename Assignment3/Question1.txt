@@ -1,0 +1,27 @@
+create database Employee
+create table Employee_Details (
+Emp_id int not null primary key,
+Emp_name varchar(30) not null,
+Job_name varchar(30) not null,
+Manager_id int not null ,
+Hire_date varchar(30) not null ,
+Salary int not null ,
+Dep_id int not null 
+);
+
+insert into Employee_Details values(201,"Suresh","HR",676,"25-09-1998",50000,866);
+insert into Employee_Details  values(202,"Krishna","TeamLead",456,"19-01-1997",35000,987);
+insert into Employee_Details  values(203,"Manasa","Developer",756,"22-06-1999",33000,234);
+insert into Employee_Details values(204,"Jayanth","System Engineer",232,"15-10-2001",42000,933);
+insert into Employee_Details  values(205,"Santhosh","Tester",132,"13-08-1999",30000,911);
+insert into Employee_Details  values(206,"keerthi","Developer",390,"12-11-1997",45000,913);
+insert into Employee_Details  values(207,"Bhavani","Data Analyist",307,"14-11-1996",40000,355);
+insert into Employee_Details  values(208,"Praveen","manager",744,"10-07-1996",50000,208);
+insert into Employee_Details  values(209,"raj","Tester",657,"17-07-2000",32000,109);
+insert into Employee_Details  values(210,"Ganesh","Developer",311,"26-10-1998",45000,576);
+
+select Salary from Employee_Details; 
+
+select distinct Job_name from Employee_Details;
+
+update Employee_Details set Salary= 30000 where Emp_name ="raj";

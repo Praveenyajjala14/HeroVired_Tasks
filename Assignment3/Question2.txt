@@ -1,0 +1,23 @@
+create database Football
+create table Football_Venue(
+venue_id int not null primary key,
+venue_name varchar(30) not null,
+city_id int not null,
+capacity int not null
+);
+insert into Football_Venue values(20001,"South Africa",5674,50000);
+insert into Football_Venue values(20002,"Russia",3487,30000);
+insert into Football_Venue values(20003,"Canada",5738,45000);
+insert into Football_Venue values(20004,"Mexico",9875,40000);
+insert into Football_Venue values(20005,"Australia",2938,35000);
+insert into Football_Venue values(20006,"USA",6784,60000);
+insert into Football_Venue values(20007,"Italy",9385,55000);
+insert into Football_Venue values(20008,"India",1036,25000);
+insert into Football_Venue values(20009,"France",2033,32000);
+insert into Football_Venue values(20010,"Sweden",5839,54000);
+
+select count(venue_name)  from football_venue;
+
+select  venue_name as Location , capacity as Volume from football_venue
+
+delete from  football_venue where venue_name="Australia";
